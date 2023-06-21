@@ -34,6 +34,11 @@
                     <span class="btn btn-primary">@taskСompletion?.Сompletion?.Name</span>
                 }
             </p>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
 
         </a>
     }
