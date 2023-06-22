@@ -48,11 +48,15 @@
             @foreach (var item in Model.TaskСompletions)
             {
                 <span>@item.Сompletion.Name</span>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Delete" />
+                </form>
             }
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+     |
     <a asp-action="Index">Back to List</a>
 </div>
